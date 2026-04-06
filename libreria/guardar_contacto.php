@@ -1,7 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 include("conexion.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,20 +18,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mensaje enviado</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <?php include("navbar.php"); ?>
+<body class="bg-light">
 
-    <div class="mensaje">
-        <h1>Mensaje enviado correctamente</h1>
-        <p>Los datos fueron guardados en la tabla contacto.</p>
-        <a href="contacto.php">Volver</a>
+<?php include("navbar.php"); ?>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card shadow border-0 text-center">
+                <div class="card-body p-5">
+                    <h1 class="text-success fw-bold mb-3">✅ Mensaje enviado</h1>
+                    <p class="text-muted mb-4">Tus datos fueron guardados correctamente en la base de datos.</p>
+                    <a href="contacto.php" class="btn btn-primary">Volver al formulario</a>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
