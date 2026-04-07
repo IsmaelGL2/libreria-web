@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mensaje enviado</title>
+    <title>Mensaje enviado | Librería Online</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
@@ -34,11 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-6">
-            <div class="card shadow border-0 text-center">
+            <div class="card border-0 shadow rounded-4 text-center">
                 <div class="card-body p-5">
-                    <h1 class="text-success fw-bold mb-3">✅ Mensaje enviado</h1>
-                    <p class="text-muted mb-4">Tus datos fueron guardados correctamente en la base de datos.</p>
-                    <a href="contacto.php" class="btn btn-primary">Volver al formulario</a>
+                    <div class="mb-3 fs-1">✅</div>
+                    <h1 class="fw-bold text-success mb-3">Mensaje enviado correctamente</h1>
+                    <p class="text-muted mb-4">
+                        Tus datos fueron guardados correctamente en la base de datos.
+                    </p>
+                    <a href="contacto.php" class="btn btn-primary btn-lg">Volver al formulario</a>
                 </div>
             </div>
         </div>
